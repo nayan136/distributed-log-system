@@ -1,0 +1,4 @@
+Dockerfile -> ["python", "-u", "app.py"], "-u" is required because
+    - Python buffers stdout by default when running in a container, and the 
+    logs are being held in the buffer instead of being immediately written to 
+    the container's log output.
